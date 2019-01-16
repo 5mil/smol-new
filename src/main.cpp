@@ -2512,10 +2512,10 @@ bool LoadBlockIndex(bool fAllowNew)
 
     if (fTestNet)
     {
-        pchMessageStart[0] = 0xa9;
-        pchMessageStart[1] = 0xe1;
-        pchMessageStart[2] = 0x1e;
-        pchMessageStart[3] = 0x9a;
+        pchMessageStart[0] = 0xbe;
+        pchMessageStart[1] = 0x09;
+        pchMessageStart[2] = 0x44;
+        pchMessageStart[3] = 0x0e;
 
         bnTrustedModulus.SetHex("a1b39cf72623dacfe326d0892b599be0f31052239cddd95a3f25101c801dc990453b38c9434efe3f372db39a32c2bb44cbaea72d62c8931fa785b0ec44531308df3e46069be5573e49bb29f4d479bfc3d162f57a5965db03810be7636da265bfced9c01a6b0296c77910ebdc8016f70174f0f18a57b3b971ac43a934c6aedbc5c866764a3622b5b7e3f9832b8b3f133c849dbcc0396588abcd1e41048555746e4823fb8aba5b3d23692c6857fccce733d6bb6ec1d5ea0afafecea14a0f6f798b6b27f77dc989c557795cc39a0940ef6bb29a7fc84135193a55bcfc2f01dd73efad1b69f45a55198bd0e6bef4d338e452f6a420f1ae2b1167b923f76633ab6e55");
         bnProofOfWorkLimit = bnProofOfWorkLimitTestNet; // 16 bits PoW target limit for testnet
@@ -2553,9 +2553,9 @@ bool LoadBlockIndex(bool fAllowNew)
         //block.nTime = 1540761060 
         //block.nNonce = 1250467 
 
-        const char* pszTimestamp = "RIP mouse 2 mic3 take over on Oct 29th, 2018";
+        const char* pszTimestamp = "9/2/2018,1pm - AriA with zEtA as new platform finance and reality";
         CTransaction txNew;
-        txNew.nTime = 1540761060;
+        txNew.nTime = 1547618027;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2565,7 +2565,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1540761060;
+        block.nTime    = 1547618027;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
         block.nNonce   = !fTestNet ? 1250467 : 0;
 

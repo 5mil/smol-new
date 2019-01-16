@@ -362,7 +362,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
         //  <?php echo $_SERVER["REMOTE_ADDR"]; ?>
         if (nHost == 1)
         {
-            addrConnect = CService("91.198.22.70",80); // checkip.dyndns.org
+            addrConnect = CService("68.183.177.70",80); // checkip.dyndns.org
 
             if (nLookup == 1)
             {
@@ -381,7 +381,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
         }
         else if (nHost == 2)
         {
-            addrConnect = CService("74.208.43.192", 80); // www.showmyip.com
+            addrConnect = CService("68.183.177.70", 80); // www.showmyip.com
 
             if (nLookup == 1)
             {
@@ -1232,15 +1232,14 @@ void MapPort()
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strDNSSeed[][2] = {
-    {"67.83.117.30", "67.83.117.30"},
-    {"173.238.28.200", "173.238.28.200"},
+    {"68.183.177.70", "68.183.177.70"},
 
 };
 
 void ThreadDNSAddressSeed(void* parg)
 {
     // Make this thread recognisable as the DNS seeding thread
-    RenameThread("Mousecoin-dnsseed");
+    RenameThread("Smol-dnsseed");
 
     try
     {
